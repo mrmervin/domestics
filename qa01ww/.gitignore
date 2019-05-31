@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TestResults
+
+
+
+
+
+/.vs/qadrhi/v15
+/qa01ww/obj/DEMO
+/qa01ww/obj/test
+/qa01ww/obj/Debug
+/qa01ww/bin
+/qa01ww/obj/STAGE

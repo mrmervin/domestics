@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qa01ww</RootNamespace>
+    <AssemblyName>qa01ww</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Demo|AnyCPU'">
+    <OutputPath>bin\Demo\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stage|AnyCPU'">
+    <OutputPath>bin\Stage\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecRun.SpecFlowPlugin, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecRun.SpecFlow.2-3-0.1.7.2\lib\net45\SpecRun.SpecFlowPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.3.2.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.3.2\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun, Version=1.7.2.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecRun.SpecFlow.2-3-0.1.7.2\lib\net45\TechTalk.SpecRun.dll</HintPath>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun.Common, Version=1.7.2.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecRun.SpecFlow.2-3-0.1.7.2\lib\net45\TechTalk.SpecRun.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.13.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.13.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="com.drhi.features\ReccRegister.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReccRegister.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\CsaToAssignApplicationInReview.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CsaToAssignApplicationInReview.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\RejectApplicationWithoutImqs1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RejectApplicationWithoutImqs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\NewEpcQuestion.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEpcQuestion.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\GenerateModelContractID.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenerateModelContractID.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\GenerateUrirInvestorId.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenerateUrirInvestorId.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\AutomateRfi.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutomateRfi.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\InvestorBankDetailsForm.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvestorBankDetailsForm.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\Verify Links are working  API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Verify Links are working  API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.external\ApplicationFormFirstPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.external\AdditionalApplicationPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.external\ApplicationFormSecondPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.external\ApplicationSubmittedPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.external\InvestorPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\AorInternalPage.cs" />
+    <Compile Include="com.drhi.stepDefinitions\AorInRhitaSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\ApplyingThroughAnInvestorSteps.cs" />
+    <Compile Include="com.drhi.features\LogIntoMyRHI.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogIntoMyRHI.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\BudgetCap.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetCap.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\MeteringForPerformance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MeteringForPerformance.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\ApplyingWithAnInvestor.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApplyingWithAnInvestor.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\BulkDeclarationPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\BudgetCapPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\ToReviewPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\CpiDetailsPage.cs" />
+    <Compile Include="com.drhi.stepDefinitions\AutomateRfiSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\EnterCPIAmountSteps.cs" />
+    <Compile Include="com.drhi.features\ApplicationToJoin.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApplicationToJoin.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\ThirdPartyInstaller.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThirdPartyInstaller.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\BulkSignAnnualDeclaration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BulkSignAnnualDeclaration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.features\EnterCpiOnRhita.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnterCpiOnRhita.feature</DependentUpon>
+    </Compile>
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\ThirdPartyListPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\HeaderSection.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\AdministrationPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.external\CustomerPage.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.internal\UserAdminPage.cs" />
+    <Compile Include="com.drhi.stepDefinitions\Add3rdPartyListOfInstallersSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\BulkDeclarationSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\BudgetCapSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\MeteringForPerformanceSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\CSAassignApplicationsSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\StepsInStepDefinition.cs" />
+    <Compile Include="com.drhi.stepDefinitions\VerifyLinksSteps.cs" />
+    <Compile Include="com.drhi.support\Page.cs" />
+    <Compile Include="com.drhi.support\Hooks.cs" />
+    <Compile Include="com.drhi.stepDefinitions\BaseStepDefinition.cs" />
+    <Compile Include="com.drhi.stepDefinitions\CustomerLoginSteps.cs" />
+    <Compile Include="com.drhi.stepDefinitions\ApplicationFormSteps.cs" />
+    <Compile Include="com.drhi.support\AppDriver.cs" />
+    <Compile Include="com.drhi.support\Helpers.cs" />
+    <Compile Include="com.drhi.support\SqlQueries.cs" />
+    <Compile Include="com.drhi.pageObjects\com.drhi.pageobjects.external\LoginPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.Demo.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Stage.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Test.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="com.drhi.features\ReccRegister.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ReccRegister.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\ApplicationToJoin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ApplicationToJoin.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\BulkSignAnnualDeclaration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BulkSignAnnualDeclaration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\MeteringForPerformance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MeteringForPerformance.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\ApplyingWithAnInvestor.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ApplyingWithAnInvestor.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\CsaToAssignApplicationInReview.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CsaToAssignApplicationInReview.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\RejectApplicationWithoutImqs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RejectApplicationWithoutImqs1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\NewEpcQuestion.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NewEpcQuestion.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\GenerateModelContractID.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GenerateModelContractID.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\GenerateUrirInvestorId.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GenerateUrirInvestorId.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\AutomateRfi.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AutomateRfi.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\InvestorBankDetailsForm.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InvestorBankDetailsForm.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\Verify Links are working  API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Verify Links are working  API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\ThirdPartyInstaller.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ThirdPartyInstaller.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\EnterCpiOnRhita.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EnterCpiOnRhita.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\LogIntoMyRHI.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LogIntoMyRHI.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.features\BudgetCap.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BudgetCap.feature.cs</LastGenOutput>
+    </None>
+    <None Include="com.drhi.resources\190224_RECC.xlsx" />
+    <None Include="com.drhi.resources\DuplicateReccID.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="com.drhi.resources\HIES.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="com.drhi.resources\IncorrectFormat.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Default.srprofile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="README.md" />
+    <None Include="runtests.cmd" />
+    <None Include="SpecRunTestProfile.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpecRunTestProfile_2011_09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.WebDriver.IEDriver.3.0.0.1\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.IEDriver.3.0.0.1\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.IEDriver.3.0.0.1\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.IEDriver.3.0.0.1\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.27\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.27\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.21.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.21.0\build\Selenium.Firefox.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.2.3.2\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.3.2\build\SpecFlow.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.27\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.27\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.SlowCheetah.3.0.61\build\Microsoft.VisualStudio.SlowCheetah.targets')" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.Firefox.WebDriver.0.21.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.21.0\build\Selenium.Firefox.WebDriver.targets')" />
+  <Import Project="..\packages\SpecFlow.2.3.2\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.3.2\build\SpecFlow.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

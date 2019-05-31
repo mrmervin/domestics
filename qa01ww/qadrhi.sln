@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qadrhi", "qa01ww\qadrhi.csproj", "{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Demo|Any CPU = Demo|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Demo|Any CPU.ActiveCfg = Demo|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Demo|Any CPU.Build.0 = Demo|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{37AC1C93-4E35-4BD2-8F9B-2919F5F80EB2}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5BEB33F-43AE-4858-96B8-A8A46C99CBD7}
+	EndGlobalSection
+EndGlobal
